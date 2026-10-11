@@ -33,6 +33,8 @@ jobs:
         run: |
           git clone --recursive --shallow-submodules --depth 1 -j8 \
             https://github.com/TelegramMessenger/Telegram-iOS.git telegram-ios
+            cd telegram-ios
+            git checkout release-12.9.2
 
       # mod/components/* are whole new Bazel packages, dropped in as-is under a single
       # PampGram/ directory; mod/telegram-ios.patch only touches files that already exist
